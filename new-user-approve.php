@@ -52,7 +52,7 @@ class pw_new_user_approve {
 		add_action( 'lostpassword_post', array( $this, 'lost_password' ) );
 		add_action( 'user_register', array( $this, 'add_user_status' ) );
 		add_action( 'user_register', array( $this, 'request_admin_approval_email_2' ) );
-		add_action( 'new_user_approve_approve_user', array( $this, 'approve_user' ) );
+		add_action( 'new_user_approve_approve_user', array( $this, 'approve_user' ), 20 );
 		add_action( 'new_user_approve_deny_user', array( $this, 'deny_user' ) );
 		add_action( 'new_user_approve_deny_user', array( $this, 'update_deny_status' ) );
 		add_action( 'admin_init', array( $this, 'verify_settings' ) );
